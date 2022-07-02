@@ -1,0 +1,171 @@
+:root {
+  --body-bg: rgb(236, 239, 241);
+  --body-color: rgb(27, 27, 27);
+
+  --btn-bg: rgb(12, 12, 12);
+  --btn-color: rgb(255, 255, 255);
+
+  --card-bg: rgb(249, 249, 251);
+  --card-content-bg: rgb(216, 226, 233);
+}
+
+.dark-theme:root {
+  --body-bg: rgb(27, 27, 27);
+  --body-color: rgb(255, 255, 255);
+
+  --btn-bg: rgb(20, 21, 21);
+  --btn-color: rgb(255, 255, 255);
+
+  --card-bg: rgb(55, 71, 79);
+  --card-content-bg: rgb(39, 48, 53);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  background-color: var(--body-bg);
+  transition: 0.3s;
+  color: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1,
+h2,
+h3 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+img[width][height] {
+  height: auto;
+}
+
+input[type='checkbox'] {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.bi {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bi-moon {
+  visibility: hidden;
+}
+
+.dark-theme .bi-sun {
+  visibility: hidden;
+}
+
+.dark-theme .bi-moon {
+  visibility: visible;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.header__container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.main {
+  justify-content: center;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  margin-top: 4rem;
+  width: 60%;
+  background-color: var(--card-bg);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card__content,
+.card__details {
+  padding: 2rem;
+  width: 150%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__content {
+  justify-content: center;
+  position: relative;
+  background-color: var(--card-content-bg);
+}
+
+.card__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.card__image {
+  transform: rotate(-10deg);
+  position: absolute;
+  right: -1px;
+  top: 10px;
+  width: 130%;
+}
+
+.card__subtitle {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card__description {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card__price {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.card__button {
+  border: none;
+  border-radius: 5px;
+  height: auto;
+  cursor: pointer;
+  width: 5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
